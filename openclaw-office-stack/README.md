@@ -50,6 +50,9 @@ Lihat juga:
 ### Main prompt pack
 - `PROMPTS.md` — prompt siap copas untuk semua 10 agent
 
+### Fastest orientation
+- `QUICK-REFERENCE.md` — 1 baris penjelasan untuk semua 10 agent
+
 ### Quick references
 - `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
 - `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent lanjutan
@@ -102,6 +105,7 @@ done
 ### Untuk prompt
 - buka `PROMPTS.md` sebagai referensi utama
 - buka `PROMPTS-ADVANCED.md` hanya jika ingin versi fokus untuk 6 agent advanced
+- buka `QUICK-REFERENCE.md` jika cuma butuh jawaban cepat agent mana untuk apa
 
 ### Untuk pengujian kualitas
 - jalanin `TEST-PLAN.md`
