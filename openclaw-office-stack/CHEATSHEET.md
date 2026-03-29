@@ -65,38 +65,43 @@ Ubah update ini jadi status proyek yang rapi + next actions:
 
 ---
 
+## 6 Agent Lanjutan
+
+### `report`
+- KPI / trend / anomaly / performance summary
+
+### `docs`
+- SOP / handover / onboarding / documentation
+
+### `support`
+- triase tiket / severity / draft customer reply
+
+### `sales`
+- lead brief / outreach / pipeline follow-up
+
+### `competitor`
+- pricing watch / product update / market intel
+
+### `code-review`
+- PR review / risk review / test gap
+
+Untuk detail cepat 6 agent ini, lihat:
+- `CHEATSHEET-ADVANCED.md`
+
+---
+
 ## Pilih Agent Berdasarkan Jenis Kerja
 
 - meeting / transcript -> `minutes`
 - email / thread / reply -> `inbox`
 - task / owner / due date / blocker -> `project`
+- angka / KPI / tren -> `report`
+- SOP / dokumentasi -> `docs`
+- tiket customer -> `support`
+- lead / outreach -> `sales`
+- market / pricing competitor -> `competitor`
+- PR / code risk -> `code-review`
 - bingung mulai dari mana -> `main`
-
----
-
-## Format Hasil yang Bagus
-
-### Meeting notes
-- Purpose
-- Key discussion points
-- Decisions made
-- Action items
-- Open questions
-
-### Inbox triage
-- Sender / thread
-- Priority
-- Topic
-- Required action
-- Deadline
-- Suggested reply
-
-### Project update
-- Objective
-- Progress this week
-- Current blockers
-- Overdue / at-risk items
-- Next week's focus
 
 ---
 
@@ -119,13 +124,19 @@ Ubah update ini jadi status proyek yang rapi + next actions:
 ### Setelah meeting
 3. `minutes` -> rapikan notulen + action items
 
+### Saat butuh laporan / dokumen / review spesifik
+4. pakai agent lanjutan sesuai tipe kerja
+
 ### Kalau ada request campuran
-4. `main` -> ubah jadi brief dan arahkan ke agent yang tepat
+5. `main` -> ubah jadi brief dan arahkan ke agent yang tepat
 
 ---
 
 ## File Lain
 
-- Prompt lengkap: `openclaw-office-stack/PROMPTS.md`
-- Contoh hasil ideal: `openclaw-office-stack/EXAMPLES.md`
+- Core 4 prompts: `openclaw-office-stack/PROMPTS.md`
+- Core 4 examples: `openclaw-office-stack/EXAMPLES.md`
+- Advanced 6 cheatsheet: `openclaw-office-stack/CHEATSHEET-ADVANCED.md`
+- Advanced 6 prompts: `openclaw-office-stack/PROMPTS-ADVANCED.md`
+- Advanced 6 examples: `openclaw-office-stack/EXAMPLES-ADVANCED.md`
 - Panduan stack: `openclaw-office-stack/README.md`

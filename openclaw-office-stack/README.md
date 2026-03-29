@@ -38,9 +38,15 @@ Template multi-instance final untuk 10 persona kantor di 1 server.
 
 ## File Tambahan Penting
 
+### Core 4
 - `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
 - `PROMPTS.md` — prompt siap copas untuk 4 agent awal
-- `EXAMPLES.md` — contoh input-output realistis agar hasil mudah dibayangkan
+- `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
+
+### Advanced 6
+- `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent sisanya
+- `PROMPTS-ADVANCED.md` — prompt siap copas untuk 6 agent sisanya
+- `EXAMPLES-ADVANCED.md` — contoh input-output realistis untuk 6 agent sisanya
 
 ## Cara Setup Cepat
 
@@ -62,12 +68,13 @@ Script ini akan membuat folder:
 find /opt/openclaw -maxdepth 3 -type f | sort
 ```
 
-### 3. Sesuaikan persona utama yang mau diaktifkan dulu
-Rekomendasi awal:
-- `main`
-- `minutes`
-- `inbox`
-- `project`
+### 3. Daftarkan agent ke OpenClaw
+
+```bash
+for a in minutes inbox project report docs support sales competitor code-review; do
+  openclaw agents add "$a" --non-interactive --workspace "/opt/openclaw/instances/$a/workspace"
+done
+```
 
 ## Isi Tiap Instance
 
@@ -90,24 +97,6 @@ Pakai jika tiap persona ingin benar-benar terpisah.
 ### Opsi B — `main` sebagai pintu depan
 Pakai `main` sebagai asisten utama. Persona lain dipakai sebagai instance spesialis saat dibutuhkan.
 
-## Rekomendasi Operasional
-
-### Phase 1
-- `main`
-- `minutes`
-- `inbox`
-- `project`
-
-### Phase 2
-- `docs`
-- `report`
-- `support`
-
-### Phase 3
-- `sales`
-- `competitor`
-- `code-review`
-
 ## Cara Kustom
 
 ### Ganti `SOUL.md`
@@ -115,14 +104,6 @@ Kalau mau, salin template persona dari folder:
 
 ```text
 /root/.openclaw/workspace/office-personas/
-```
-
-Contoh:
-
-```bash
-cp /root/.openclaw/workspace/office-personas/03-minutes-meeting-notes/SOUL.md /opt/openclaw/instances/minutes/workspace/SOUL.md
-cp /root/.openclaw/workspace/office-personas/04-inbox-triage/SOUL.md /opt/openclaw/instances/inbox/workspace/SOUL.md
-cp /root/.openclaw/workspace/office-personas/01-orion-project-coordinator/SOUL.md /opt/openclaw/instances/project/workspace/SOUL.md
 ```
 
 ### Edit identitas dan human context
@@ -136,14 +117,26 @@ Sesuaikan file berikut per instance:
 - 1 persona = 1 workspace
 - jangan share `MEMORY.md` antar persona berbeda
 - file shared sebaiknya taruh di `/opt/openclaw/shared/`
-- mulai dari 4 instance dulu agar ringan
+- gunakan `main` untuk request campuran atau saat belum jelas harus pakai agent mana
 
-## Next Step yang Disarankan
+## Pemakaian Harian
 
-Setelah bootstrap:
-1. copy `SOUL.md` persona yang sesuai
-2. aktifkan 4 instance awal
-3. pakai `CHEATSHEET.md` untuk penggunaan harian cepat
-4. pakai `PROMPTS.md` untuk prompt siap copas
-5. cek `EXAMPLES.md` sebagai benchmark hasil
-6. baru tambah persona lain
+### Untuk 4 agent awal
+- lihat `CHEATSHEET.md`
+- pakai `PROMPTS.md`
+- cek `EXAMPLES.md`
+
+### Untuk 6 agent lanjutan
+- lihat `CHEATSHEET-ADVANCED.md`
+- pakai `PROMPTS-ADVANCED.md`
+- cek `EXAMPLES-ADVANCED.md`
+
+## Ringkasannya
+
+Sekarang semua 10 agent sudah punya:
+- workspace
+- persona / `SOUL.md`
+- agent registration
+- prompt reference
+- example reference
+- cheatsheet
