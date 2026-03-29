@@ -50,14 +50,16 @@ Lihat juga:
 ### Main prompt pack
 - `PROMPTS.md` — prompt siap copas untuk semua 10 agent
 
-### Core dispatcher + first wave
+### Quick references
 - `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
-- `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
+- `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent lanjutan
 
-### Advanced 6
-- `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent sisanya
-- `PROMPTS-ADVANCED.md` — prompt tambahan/arsip untuk 6 agent sisanya
+### Examples
+- `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
 - `EXAMPLES-ADVANCED.md` — contoh input-output realistis untuk 6 agent sisanya
+
+### Supplemental prompt addendum
+- `PROMPTS-ADVANCED.md` — lampiran fokus/ringkas untuk 6 agent advanced (bukan prompt pack utama)
 
 ### Testing
 - `TEST-PLAN.md` — skenario nyata untuk menguji semua 10 agent
@@ -96,6 +98,10 @@ done
 - `sales` -> lead / outreach / pipeline
 - `competitor` -> market / pricing watch
 - `code-review` -> PR / risk / test gap
+
+### Untuk prompt
+- buka `PROMPTS.md` sebagai referensi utama
+- buka `PROMPTS-ADVANCED.md` hanya jika ingin versi fokus untuk 6 agent advanced
 
 ### Untuk pengujian kualitas
 - jalanin `TEST-PLAN.md`

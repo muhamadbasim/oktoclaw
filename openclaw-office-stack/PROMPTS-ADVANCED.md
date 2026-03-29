@@ -1,6 +1,13 @@
-# PROMPTS-ADVANCED.md - Ready-to-use prompts for the remaining 6 office agents
+# PROMPTS-ADVANCED.md - Focused prompt addendum for the advanced 6 office agents
 
-Paket prompt ini untuk:
+File ini sekarang berfungsi sebagai **lampiran fokus** untuk 6 agent lanjutan.
+
+Catatan:
+- **Prompt pack utama** untuk semua 10 agent sekarang ada di `PROMPTS.md`
+- File ini dipertahankan sebagai versi ringkas/fokus untuk agent-agent advanced saja
+- Kalau bingung mau mulai dari mana, buka `PROMPTS.md` dulu
+
+Agent yang dicakup di file ini:
 - `report`
 - `docs`
 - `support`
@@ -10,7 +17,19 @@ Paket prompt ini untuk:
 
 ---
 
-## 1) REPORT — KPI / metrics / business summary
+## Cara pakai file ini
+
+Pakai file ini kalau kamu:
+- sudah paham struktur stack kantor
+- cuma butuh prompt untuk 6 agent advanced
+- ingin referensi yang lebih ringkas tanpa campur 4 agent awal
+
+Kalau butuh prompt lengkap semua agent, pakai:
+- `PROMPTS.md`
+
+---
+
+## 1) `report` — KPI / metrics / business summary
 
 ### Prompt: ringkas KPI
 ```text
@@ -38,9 +57,16 @@ Pisahkan:
 - what needs checking next
 ```
 
+### Prompt: executive report 5 bullets
+```text
+Ubah data berikut jadi executive report 5 bullet yang bisa dibaca cepat oleh manajer.
+
+[tempel data]
+```
+
 ---
 
-## 2) DOCS — SOP / handover / documentation
+## 2) `docs` — SOP / handover / documentation
 
 ### Prompt: buat SOP
 ```text
@@ -71,9 +97,16 @@ Format:
 - Next recommended actions
 ```
 
+### Prompt: rapikan dokumentasi internal
+```text
+Rapikan dokumentasi berikut supaya lebih jelas, lebih singkat, dan mudah dipakai tim baru.
+
+[tempel draft doc]
+```
+
 ---
 
-## 3) SUPPORT — customer issue triage
+## 3) `support` — customer issue triage
 
 ### Prompt: triase tiket
 ```text
@@ -100,9 +133,16 @@ Dari issue berikut, buat dua output:
 [tempel issue]
 ```
 
+### Prompt: first response singkat
+```text
+Buat first response yang singkat, tenang, dan profesional untuk issue berikut.
+
+[tempel issue]
+```
+
 ---
 
-## 4) SALES — outreach / pipeline / lead brief
+## 4) `sales` — outreach / pipeline / lead brief
 
 ### Prompt: lead brief
 ```text
@@ -132,9 +172,22 @@ Format:
 - CTA
 ```
 
+### Prompt: pipeline summary
+```text
+Ringkas update pipeline berikut.
+
+[tempel pipeline notes]
+
+Format:
+- Active deals
+- At-risk deals
+- Stalled deals
+- Recommended follow-ups
+```
+
 ---
 
-## 5) COMPETITOR — market / competitor intel
+## 5) `competitor` — market / competitor intel
 
 ### Prompt: competitor update
 ```text
@@ -163,9 +216,16 @@ Format:
 - Suggested internal follow-up
 ```
 
+### Prompt: battlecard note
+```text
+Ubah update kompetitor berikut jadi battlecard singkat untuk tim sales/marketing.
+
+[tempel update]
+```
+
 ---
 
-## 6) CODE-REVIEW — PR / diff / risk review
+## 6) `code-review` — PR / diff / risk review
 
 ### Prompt: review diff
 ```text
@@ -191,3 +251,24 @@ Analisis perubahan berikut dan fokus cari:
 
 [tempel diff / summary]
 ```
+
+### Prompt: ubah jadi PR comments
+```text
+Dari perubahan berikut, tulis review comments yang actionable dan siap ditempel ke PR.
+
+[tempel diff / summary]
+```
+
+---
+
+## Quick index
+
+- KPI / trend / anomaly -> `report`
+- SOP / handover / docs -> `docs`
+- tiket customer / first response -> `support`
+- lead / outreach / pipeline -> `sales`
+- pricing / market / competitor -> `competitor`
+- PR / risk / missing tests -> `code-review`
+
+Untuk versi lengkap semua agent:
+- `PROMPTS.md`
