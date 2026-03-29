@@ -47,19 +47,22 @@ Lihat juga:
 
 ## File Tambahan Penting
 
+### Main prompt pack
+- `PROMPTS.md` — prompt siap copas untuk semua 10 agent
+
 ### Core dispatcher + first wave
 - `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
-- `PROMPTS.md` — prompt siap copas untuk 4 agent awal
 - `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
 
 ### Advanced 6
 - `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent sisanya
-- `PROMPTS-ADVANCED.md` — prompt siap copas untuk 6 agent sisanya
+- `PROMPTS-ADVANCED.md` — prompt tambahan/arsip untuk 6 agent sisanya
 - `EXAMPLES-ADVANCED.md` — contoh input-output realistis untuk 6 agent sisanya
 
 ### Testing
 - `TEST-PLAN.md` — skenario nyata untuk menguji semua 10 agent
 - `TEST-RUN-CHECKLIST.md` — checklist cepat saat review hasil uji
+- `TEST-REPORT.md` — ringkasan hasil retest agent
 
 ## Cara Setup Cepat
 
@@ -97,6 +100,7 @@ done
 ### Untuk pengujian kualitas
 - jalanin `TEST-PLAN.md`
 - nilai hasil pakai `TEST-RUN-CHECKLIST.md`
+- lihat hasil ringkas di `TEST-REPORT.md`
 
 ## Ringkasan
 
