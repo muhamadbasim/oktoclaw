@@ -36,6 +36,11 @@ Template multi-instance final untuk 10 persona kantor di 1 server.
 - `competitor` — competitor watch
 - `code-review` — engineering review
 
+## File Tambahan Penting
+
+- `PROMPTS.md` — prompt siap copas untuk 4 agent awal
+- `EXAMPLES.md` — contoh input-output realistis agar hasil mudah dibayangkan
+
 ## Cara Setup Cepat
 
 ### 1. Jalankan script bootstrap
@@ -137,5 +142,6 @@ Sesuaikan file berikut per instance:
 Setelah bootstrap:
 1. copy `SOUL.md` persona yang sesuai
 2. aktifkan 4 instance awal
-3. tes workflow kantor sehari-hari
-4. baru tambah persona lain
+3. pakai `PROMPTS.md` untuk mulai cepat
+4. cek `EXAMPLES.md` sebagai benchmark hasil
+5. baru tambah persona lain
