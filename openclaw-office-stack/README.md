@@ -60,6 +60,7 @@ Lihat juga:
 ### Examples
 - `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
 - `EXAMPLES-ADVANCED.md` — contoh input-output realistis untuk 6 agent sisanya
+- `BEFORE-VS-AFTER.md` — contoh sederhana sebelum vs sesudah prompt tuning untuk semua 10 agent
 
 ### Supplemental prompt addendum
 - `PROMPTS-ADVANCED.md` — lampiran fokus/ringkas untuk 6 agent advanced (bukan prompt pack utama)
@@ -111,6 +112,7 @@ done
 - jalanin `TEST-PLAN.md`
 - nilai hasil pakai `TEST-RUN-CHECKLIST.md`
 - lihat hasil ringkas di `TEST-REPORT.md`
+- lihat `BEFORE-VS-AFTER.md` untuk memahami dampak prompt tuning
 
 ## Ringkasan
 
