@@ -1,17 +1,27 @@
 # oktoclaw
 
-Koleksi template dan workflow **OpenClaw multi-agent** untuk kebutuhan kantor.
+Toolkit untuk membangun **OpenClaw office stack**: kumpulan persona, prompt pack, contoh output, dan workflow multi-agent untuk kebutuhan kerja kantor.
 
-Repo ini berisi dua bagian utama:
+Repo ini cocok kalau kamu ingin:
+- menjalankan beberapa agent OpenClaw di **1 server**
+- memisahkan agent personal dan agent kantor
+- punya persona siap pakai untuk kerjaan seperti meeting notes, inbox triage, project coordination, reporting, docs, support, sales, competitor watch, dan code review
+- menguji kualitas agent dengan test plan yang jelas
 
-- `office-personas/` → template persona/use case kantor berbasis `SOUL.md`
-- `openclaw-office-stack/` → paket implementasi multi-instance/multi-agent yang lebih lengkap, termasuk prompt, examples, cheatsheet, dan test plan
+## What's inside
 
-## Isi Repo
+Repo ini punya 2 bagian utama:
 
-### 1. `office-personas/`
-Template cepat untuk 10 use case kantor:
-- project coordination
+### `office-personas/`
+Koleksi **template `SOUL.md`** untuk berbagai use case kantor.
+
+Cocok untuk:
+- copy-paste persona dengan cepat
+- eksperimen per role
+- bikin agent baru dari template ringan
+
+Use case yang tersedia:
+- project coordinator
 - standup facilitator
 - meeting notes
 - inbox triage
@@ -22,29 +32,31 @@ Template cepat untuk 10 use case kantor:
 - support triage
 - competitor watch
 
-Cocok kalau kamu mau ambil `SOUL.md` per peran dan pakai manual.
+### `openclaw-office-stack/`
+Paket implementasi yang lebih lengkap untuk **multi-agent office setup**.
 
-### 2. `openclaw-office-stack/`
-Versi yang lebih siap deploy untuk 1 server dengan banyak agent.
-
-Termasuk:
-- struktur stack kantor
+Isinya:
+- struktur agent stack
 - bootstrap script
-- mapping agent
+- naming map agent
 - cheatsheet penggunaan
 - prompt siap copas
-- contoh input-output
-- test plan dan review checklist
+- contoh input/output
+- test plan + review checklist
 
-## Arsitektur yang Dipakai
+Kalau tujuanmu bukan cuma lihat persona tapi benar-benar mau deploy dan pakai stack kantor, mulai dari folder ini.
 
-### Personal vs Office
-Repo ini membedakan dua jalur:
+## Architecture
 
+Repo ini membedakan **agent personal** dan **agent kantor**.
+
+### Personal agent
 - `main` → agent personal/default yang sudah ada sebelumnya
-- `office-main` → dispatcher utama untuk workflow kantor
 
-Agent spesialis kantor:
+### Office dispatcher
+- `office-main` → pintu depan untuk workflow kantor
+
+### Office specialist agents
 - `minutes`
 - `inbox`
 - `project`
@@ -55,61 +67,19 @@ Agent spesialis kantor:
 - `competitor`
 - `code-review`
 
-Lihat:
+Lihat juga:
 - `openclaw-office-stack/AGENT-MAP.md`
 
-## Start Cepat
+## Recommended usage flow
 
-### Lihat stack kantor
-Buka:
-- `openclaw-office-stack/README.md`
+Kalau baru mulai, pakai urutan ini:
 
-### Lihat prompt siap pakai
-Buka:
-- `openclaw-office-stack/PROMPTS.md`
-- `openclaw-office-stack/PROMPTS-ADVANCED.md`
-
-### Lihat cheatsheet
-Buka:
-- `openclaw-office-stack/CHEATSHEET.md`
-- `openclaw-office-stack/CHEATSHEET-ADVANCED.md`
-
-### Lihat contoh hasil ideal
-Buka:
-- `openclaw-office-stack/EXAMPLES.md`
-- `openclaw-office-stack/EXAMPLES-ADVANCED.md`
-
-### Jalankan pengujian
-Buka:
-- `openclaw-office-stack/TEST-PLAN.md`
-- `openclaw-office-stack/TEST-RUN-CHECKLIST.md`
-
-## Setup Ringkas
-
-Contoh bootstrap:
-
-```bash
-bash /root/.openclaw/workspace/openclaw-office-stack/scripts/bootstrap.sh
-```
-
-Contoh registrasi agent:
-
-```bash
-openclaw agents add office-main --non-interactive --workspace /opt/openclaw/instances/main/workspace
-for a in minutes inbox project report docs support sales competitor code-review; do
-  openclaw agents add "$a" --non-interactive --workspace "/opt/openclaw/instances/$a/workspace"
-done
-```
-
-## Rekomendasi Urutan Pakai
-
-Kalau baru mulai, pakai dulu:
 1. `office-main`
 2. `minutes`
 3. `inbox`
 4. `project`
 
-Lalu tambah:
+Lalu tambah agent lanjutan:
 - `report`
 - `docs`
 - `support`
@@ -117,7 +87,92 @@ Lalu tambah:
 - `competitor`
 - `code-review`
 
-## Catatan
+## Quick start
 
-Repo ini fokus ke **struktur, persona, prompt, dan workflow**.
-Bukan produk final SaaS, tapi toolkit kerja buat membangun stack OpenClaw kantor yang rapi.
+### 1. Explore the stack
+Mulai dari file ini:
+- `openclaw-office-stack/README.md`
+
+### 2. Use ready-made prompts
+- `openclaw-office-stack/PROMPTS.md`
+- `openclaw-office-stack/PROMPTS-ADVANCED.md`
+
+### 3. Use cheatsheets
+- `openclaw-office-stack/CHEATSHEET.md`
+- `openclaw-office-stack/CHEATSHEET-ADVANCED.md`
+
+### 4. Review ideal outputs
+- `openclaw-office-stack/EXAMPLES.md`
+- `openclaw-office-stack/EXAMPLES-ADVANCED.md`
+
+### 5. Run quality tests
+- `openclaw-office-stack/TEST-PLAN.md`
+- `openclaw-office-stack/TEST-RUN-CHECKLIST.md`
+
+## Setup example
+
+### Bootstrap the office stack
+```bash
+bash /root/.openclaw/workspace/openclaw-office-stack/scripts/bootstrap.sh
+```
+
+### Register the agents in OpenClaw
+```bash
+openclaw agents add office-main --non-interactive --workspace /opt/openclaw/instances/main/workspace
+for a in minutes inbox project report docs support sales competitor code-review; do
+  openclaw agents add "$a" --non-interactive --workspace "/opt/openclaw/instances/$a/workspace"
+done
+```
+
+## Repo map
+
+```text
+.
+├── README.md
+├── office-personas/
+│   ├── 01-orion-project-coordinator/
+│   ├── 02-standup-facilitator/
+│   ├── 03-minutes-meeting-notes/
+│   ├── 04-inbox-triage/
+│   ├── 05-report-analyst/
+│   ├── 06-code-reviewer/
+│   ├── 07-docs-writer/
+│   ├── 08-sales-assistant/
+│   ├── 09-support-triage/
+│   ├── 10-competitor-watch/
+│   └── README.md
+└── openclaw-office-stack/
+    ├── README.md
+    ├── AGENT-MAP.md
+    ├── CHEATSHEET.md
+    ├── CHEATSHEET-ADVANCED.md
+    ├── PROMPTS.md
+    ├── PROMPTS-ADVANCED.md
+    ├── EXAMPLES.md
+    ├── EXAMPLES-ADVANCED.md
+    ├── TEST-PLAN.md
+    ├── TEST-RUN-CHECKLIST.md
+    └── scripts/
+```
+
+## Who this repo is for
+
+Repo ini paling cocok untuk:
+- founder / operator yang ingin asisten kantor multi-role
+- tim kecil yang butuh office automation ringan
+- pengguna OpenClaw yang ingin mulai dari template, bukan dari nol
+- orang yang mau eksperimen dengan agent specialization tanpa setup terlalu abstrak
+
+## Notes
+
+- Repo ini fokus pada **persona design, prompt assets, testing, dan workflow**
+- Ini bukan platform SaaS siap jual; ini lebih seperti **starter kit / operating kit** untuk OpenClaw office agents
+- `main` personal dibiarkan terpisah supaya tidak bentrok dengan workflow kantor
+
+## Suggested next step
+
+Kalau baru datang ke repo ini, buka file berikut secara berurutan:
+1. `openclaw-office-stack/README.md`
+2. `openclaw-office-stack/CHEATSHEET.md`
+3. `openclaw-office-stack/PROMPTS.md`
+4. `openclaw-office-stack/TEST-PLAN.md`
