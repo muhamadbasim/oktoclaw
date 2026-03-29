@@ -47,24 +47,16 @@ Lihat juga:
 
 ## File Tambahan Penting
 
-### Main prompt pack
+### Main references
 - `PROMPTS.md` — prompt siap copas untuk semua 10 agent
-
-### Fastest orientation
+- `CHEATSHEET.md` — panduan super singkat untuk semua 10 agent
+- `EXAMPLES.md` — contoh input-output realistis untuk semua 10 agent
 - `QUICK-REFERENCE.md` — 1 baris penjelasan untuk semua 10 agent
 - `KEYWORDS.md` — keyword chat untuk manggil agent secara natural
 
-### Quick references
-- `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
-- `CHEATSHEET-ADVANCED.md` — ringkasan cepat untuk 6 agent lanjutan
-
-### Examples
-- `EXAMPLES.md` — contoh input-output realistis untuk 4 agent awal
-- `EXAMPLES-ADVANCED.md` — contoh input-output realistis untuk 6 agent sisanya
+### Supporting docs
 - `BEFORE-VS-AFTER.md` — contoh sederhana sebelum vs sesudah prompt tuning untuk semua 10 agent
-
-### Supplemental prompt addendum
-- `PROMPTS-ADVANCED.md` — lampiran fokus/ringkas untuk 6 agent advanced (bukan prompt pack utama)
+- `AGENT-MAP.md` — peta nama agent personal vs office stack
 
 ### Testing
 - `TEST-PLAN.md` — skenario nyata untuk menguji semua 10 agent
@@ -104,11 +96,12 @@ done
 - `competitor` -> market / pricing watch
 - `code-review` -> PR / risk / test gap
 
-### Untuk prompt
-- buka `PROMPTS.md` sebagai referensi utama
-- buka `PROMPTS-ADVANCED.md` hanya jika ingin versi fokus untuk 6 agent advanced
-- buka `QUICK-REFERENCE.md` jika cuma butuh jawaban cepat agent mana untuk apa
-- buka `KEYWORDS.md` jika mau manggil agent langsung dari chat/WhatsApp/Telegram
+### Untuk referensi cepat
+- buka `PROMPTS.md` untuk prompt utama
+- buka `CHEATSHEET.md` untuk panduan cepat
+- buka `EXAMPLES.md` untuk contoh hasil ideal
+- buka `QUICK-REFERENCE.md` untuk one-line guide
+- buka `KEYWORDS.md` untuk panggil agent dari chat
 
 ### Untuk pengujian kualitas
 - jalanin `TEST-PLAN.md`

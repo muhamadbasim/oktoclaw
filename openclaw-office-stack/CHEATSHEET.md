@@ -1,12 +1,10 @@
 # CHEATSHEET.md - Office agents quick reference
 
-Pakai file ini kalau mau cepat tanpa buka dokumentasi panjang.
+Pakai file ini kalau mau cepat tanpa buka dokumentasi panjang. File ini sekarang mencakup **semua 10 agent kantor**.
 
 ---
 
-## 4 Agent Awal
-
-### `main`
+## 1) `office-main`
 Dipakai untuk:
 - triage kebutuhan campuran
 - ubah chat berantakan jadi brief kerja
@@ -20,7 +18,7 @@ Rapikan kebutuhan ini jadi brief kerja yang jelas dan tentukan agent paling coco
 
 ---
 
-### `minutes`
+## 2) `minutes`
 Dipakai untuk:
 - notulen meeting
 - action items
@@ -35,7 +33,7 @@ Ubah transcript ini jadi notulen + action items + open questions:
 
 ---
 
-### `inbox`
+## 3) `inbox`
 Dipakai untuk:
 - triase email
 - ringkas thread panjang
@@ -50,7 +48,7 @@ Triage thread/email ini dan draft balasan singkat:
 
 ---
 
-### `project`
+## 4) `project`
 Dipakai untuk:
 - task list
 - weekly status
@@ -65,28 +63,92 @@ Ubah update ini jadi status proyek yang rapi + next actions:
 
 ---
 
-## 6 Agent Lanjutan
+## 5) `report`
+Dipakai untuk:
+- KPI mingguan/bulanan
+- dashboard summary
+- anomaly / trend analysis
 
-### `report`
-- KPI / trend / anomaly / performance summary
+Prompt cepat:
+```text
+Ringkas data KPI berikut jadi laporan yang mudah dibaca manajer:
+[tempel data]
+```
 
-### `docs`
-- SOP / handover / onboarding / documentation
+---
 
-### `support`
-- triase tiket / severity / draft customer reply
+## 6) `docs`
+Dipakai untuk:
+- SOP
+- handover
+- onboarding docs
+- internal documentation
 
-### `sales`
-- lead brief / outreach / pipeline follow-up
+Prompt cepat:
+```text
+Ubah catatan berikut jadi SOP yang rapi dan bisa diikuti orang lain:
+[tempel notes]
+```
 
-### `competitor`
-- pricing watch / product update / market intel
+---
 
-### `code-review`
-- PR review / risk review / test gap
+## 7) `support`
+Dipakai untuk:
+- triase tiket
+- severity
+- missing info
+- draft jawaban awal customer
 
-Untuk detail cepat 6 agent ini, lihat:
-- `CHEATSHEET-ADVANCED.md`
+Prompt cepat:
+```text
+Triage tiket/customer issue berikut:
+[tempel issue]
+```
+
+---
+
+## 8) `sales`
+Dipakai untuk:
+- lead brief
+- outreach draft
+- follow-up
+- pipeline recap
+
+Prompt cepat:
+```text
+Buat lead brief dari informasi berikut:
+[tempel info]
+```
+
+---
+
+## 9) `competitor`
+Dipakai untuk:
+- update kompetitor
+- pricing watch
+- product change watch
+- market intel
+
+Prompt cepat:
+```text
+Ringkas update kompetitor berikut jadi intel yang berguna untuk tim:
+[tempel update]
+```
+
+---
+
+## 10) `code-review`
+Dipakai untuk:
+- review PR/diff
+- test gap
+- technical risk
+- maintainability review
+
+Prompt cepat:
+```text
+Review diff / PR berikut:
+[tempel diff / summary]
+```
 
 ---
 
@@ -101,13 +163,13 @@ Untuk detail cepat 6 agent ini, lihat:
 - lead / outreach -> `sales`
 - market / pricing competitor -> `competitor`
 - PR / code risk -> `code-review`
-- bingung mulai dari mana -> `main`
+- bingung mulai dari mana -> `office-main`
 
 ---
 
 ## Aturan Praktis
 
-- kalau input berantakan -> mulai dari `main`
+- kalau input berantakan -> mulai dari `office-main`
 - kalau butuh hasil siap kirim ke tim -> minta format eksplisit
 - kalau owner/due date tidak ada -> jangan ngarang
 - kalau thread panjang -> minta ringkas dulu, baru draft reply
@@ -125,18 +187,16 @@ Untuk detail cepat 6 agent ini, lihat:
 3. `minutes` -> rapikan notulen + action items
 
 ### Saat butuh laporan / dokumen / review spesifik
-4. pakai agent lanjutan sesuai tipe kerja
+4. pakai agent spesialis yang sesuai
 
 ### Kalau ada request campuran
-5. `main` -> ubah jadi brief dan arahkan ke agent yang tepat
+5. `office-main` -> ubah jadi brief dan arahkan ke agent yang tepat
 
 ---
 
 ## File Lain
 
-- Core 4 prompts: `openclaw-office-stack/PROMPTS.md`
-- Core 4 examples: `openclaw-office-stack/EXAMPLES.md`
-- Advanced 6 cheatsheet: `openclaw-office-stack/CHEATSHEET-ADVANCED.md`
-- Advanced 6 prompts: `openclaw-office-stack/PROMPTS-ADVANCED.md`
-- Advanced 6 examples: `openclaw-office-stack/EXAMPLES-ADVANCED.md`
+- Prompt utama 10 agent: `openclaw-office-stack/PROMPTS.md`
+- Contoh semua agent: `openclaw-office-stack/EXAMPLES.md`
 - Panduan stack: `openclaw-office-stack/README.md`
+- Keyword chat: `openclaw-office-stack/KEYWORDS.md`
