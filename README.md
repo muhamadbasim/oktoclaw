@@ -8,6 +8,10 @@ Repo ini cocok kalau kamu ingin:
 - punya persona siap pakai untuk kerjaan seperti meeting notes, inbox triage, project coordination, reporting, docs, support, sales, competitor watch, dan code review
 - menguji kualitas agent dengan test plan yang jelas
 
+## License
+
+This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
+
 ## What's inside
 
 Repo ini punya 2 bagian utama:
@@ -70,6 +74,33 @@ Repo ini membedakan **agent personal** dan **agent kantor**.
 Lihat juga:
 - `openclaw-office-stack/AGENT-MAP.md`
 
+## Architecture diagram
+
+```mermaid
+flowchart TD
+    U[User / Team] --> OM[office-main\nOffice Main Dispatcher]
+
+    OM --> M[minutes\nMeeting notes]
+    OM --> I[inbox\nInbox triage]
+    OM --> P[project\nProject coordination]
+    OM --> R[report\nKPI / reporting]
+    OM --> D[docs\nDocumentation]
+    OM --> S[support\nSupport triage]
+    OM --> SA[sales\nSales assistant]
+    OM --> C[competitor\nCompetitor watch]
+    OM --> CR[code-review\nCode review]
+
+    U -. personal / general assistant .-> PM[main\nPersonal agent]
+```
+
+## How the flow works
+
+1. **User masuk ke `office-main`** saat request masih campuran atau belum jelas bentuk kerjanya.
+2. `office-main` memecah request menjadi workstream yang lebih spesifik.
+3. Workstream diarahkan ke agent spesialis yang paling cocok.
+4. Output agent spesialis bisa dipakai langsung atau dirapikan lagi untuk kebutuhan tim.
+5. Agent `main` personal tetap terpisah untuk kebutuhan personal / non-office.
+
 ## Recommended usage flow
 
 Kalau baru mulai, pakai urutan ini:
@@ -128,6 +159,7 @@ done
 
 ```text
 .
+├── LICENSE
 ├── README.md
 ├── office-personas/
 │   ├── 01-orion-project-coordinator/
