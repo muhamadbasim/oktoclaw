@@ -38,6 +38,7 @@ Template multi-instance final untuk 10 persona kantor di 1 server.
 
 ## File Tambahan Penting
 
+- `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
 - `PROMPTS.md` — prompt siap copas untuk 4 agent awal
 - `EXAMPLES.md` — contoh input-output realistis agar hasil mudah dibayangkan
 
@@ -142,6 +143,7 @@ Sesuaikan file berikut per instance:
 Setelah bootstrap:
 1. copy `SOUL.md` persona yang sesuai
 2. aktifkan 4 instance awal
-3. pakai `PROMPTS.md` untuk mulai cepat
-4. cek `EXAMPLES.md` sebagai benchmark hasil
-5. baru tambah persona lain
+3. pakai `CHEATSHEET.md` untuk penggunaan harian cepat
+4. pakai `PROMPTS.md` untuk prompt siap copas
+5. cek `EXAMPLES.md` sebagai benchmark hasil
+6. baru tambah persona lain
