@@ -12,6 +12,17 @@ Repo ini cocok kalau kamu ingin:
 
 This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
 
+## Versioning
+
+Repo ini memakai versi rilis di GitHub.
+
+Rule of thumb:
+- **patch** → perbaikan kecil / typo / sync docs minor
+- **minor** → penambahan dokumentasi penting, prompt pack baru, struktur docs yang lebih baik, fitur non-breaking
+- **major** → perubahan struktur besar, alur penggunaan utama berubah, atau perubahan yang membuat dokumentasi/usage lama tidak lagi cocok
+
+Riwayat versi ada di [`CHANGELOG.md`](CHANGELOG.md).
+
 ## Start here
 
 ### If you want templates only
