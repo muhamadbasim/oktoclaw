@@ -12,6 +12,26 @@ Repo ini cocok kalau kamu ingin:
 
 This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE).
 
+## Start here
+
+### If you want templates only
+Buka:
+- `office-personas/`
+
+Cocok kalau kamu cuma ingin:
+- ambil template `SOUL.md`
+- eksperimen cepat dengan persona
+- bikin agent baru dari contoh sederhana
+
+### If you want the full office-agent stack
+Buka:
+- `openclaw-office-stack/README.md`
+
+Cocok kalau kamu ingin:
+- setup multi-agent kantor yang lebih rapi
+- pakai dispatcher + specialist agents
+- pakai prompt pack, examples, testing docs, dan workflow yang sudah disiapkan
+
 ## What's inside
 
 Repo ini punya 2 bagian utama:
@@ -124,21 +144,20 @@ Lalu tambah agent lanjutan:
 Mulai dari file ini:
 - `openclaw-office-stack/README.md`
 
-### 2. Use ready-made prompts
+### 2. Use ready-made references
 - `openclaw-office-stack/PROMPTS.md`
-- `openclaw-office-stack/PROMPTS-ADVANCED.md`
-
-### 3. Use cheatsheets
 - `openclaw-office-stack/CHEATSHEET.md`
-- `openclaw-office-stack/CHEATSHEET-ADVANCED.md`
-
-### 4. Review ideal outputs
 - `openclaw-office-stack/EXAMPLES.md`
-- `openclaw-office-stack/EXAMPLES-ADVANCED.md`
+- `openclaw-office-stack/QUICK-REFERENCE.md`
+- `openclaw-office-stack/KEYWORDS.md`
 
-### 5. Run quality tests
+### 3. Understand tuning improvements
+- `openclaw-office-stack/BEFORE-VS-AFTER.md`
+
+### 4. Run quality tests
 - `openclaw-office-stack/TEST-PLAN.md`
 - `openclaw-office-stack/TEST-RUN-CHECKLIST.md`
+- `openclaw-office-stack/TEST-REPORT.md`
 
 ## Setup example
 
@@ -160,6 +179,7 @@ done
 ```text
 .
 ├── LICENSE
+├── CHANGELOG.md
 ├── README.md
 ├── office-personas/
 │   ├── 01-orion-project-coordinator/
@@ -176,13 +196,14 @@ done
 └── openclaw-office-stack/
     ├── README.md
     ├── AGENT-MAP.md
+    ├── BEFORE-VS-AFTER.md
     ├── CHEATSHEET.md
-    ├── CHEATSHEET-ADVANCED.md
-    ├── PROMPTS.md
-    ├── PROMPTS-ADVANCED.md
     ├── EXAMPLES.md
-    ├── EXAMPLES-ADVANCED.md
+    ├── KEYWORDS.md
+    ├── PROMPTS.md
+    ├── QUICK-REFERENCE.md
     ├── TEST-PLAN.md
+    ├── TEST-REPORT.md
     ├── TEST-RUN-CHECKLIST.md
     └── scripts/
 ```
