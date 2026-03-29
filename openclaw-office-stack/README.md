@@ -52,6 +52,7 @@ Lihat juga:
 
 ### Fastest orientation
 - `QUICK-REFERENCE.md` — 1 baris penjelasan untuk semua 10 agent
+- `KEYWORDS.md` — keyword chat untuk manggil agent secara natural
 
 ### Quick references
 - `CHEATSHEET.md` — panduan super singkat 1 halaman untuk penggunaan harian
@@ -107,6 +108,7 @@ done
 - buka `PROMPTS.md` sebagai referensi utama
 - buka `PROMPTS-ADVANCED.md` hanya jika ingin versi fokus untuk 6 agent advanced
 - buka `QUICK-REFERENCE.md` jika cuma butuh jawaban cepat agent mana untuk apa
+- buka `KEYWORDS.md` jika mau manggil agent langsung dari chat/WhatsApp/Telegram
 
 ### Untuk pengujian kualitas
 - jalanin `TEST-PLAN.md`
